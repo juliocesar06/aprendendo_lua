@@ -1,4 +1,4 @@
-# aprendendo_lua
+# aprendendo_lua 2022
 curso da linguagem lua
 ---------------------------------------------------
 # palavras reservadas
