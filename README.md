@@ -23,7 +23,7 @@ As seguintes cadeias denotam outros itens léxicos:
 -----------------------------------------------
 # local/global
 ----------------------------------------
-<<<<<<< HEAD
+
 local x  ==> variaveis locais <br/>
 =======
 local x  ==> variaveis locais
@@ -33,7 +33,7 @@ x ==> variavel global por padrao
 -----------------------------------------
 # tipos de dados
 
-<<<<<<< HEAD
+
 numericos ==> 3 /  3.0 /  3.1416 /  314.16e-2 /  0.31416E1 /  0xff  / 0x56(tudo number)
 =======
 numericos ==> 3   3.0   3.1416   314.16e-2   0.31416E1   0xff   0x56(tudo number)
@@ -46,7 +46,7 @@ function (x)do return x*x end ==> funçoes
 nil e 0 ==> null ou nulo
 
 -----------------------------------------
-<<<<<<< HEAD
+
 # controle if / elseif / else
 if exp then bloco {elseif exp then bloco} [else bloco] end
 ex: 
@@ -63,7 +63,7 @@ end
 =======
 # controle if
 if exp then bloco {elseif exp then bloco} [else bloco] end
->>>>>>> 2d1c8fba9db2c3124ef2caffdfc9ce5dc613f518
+
 
 
  
