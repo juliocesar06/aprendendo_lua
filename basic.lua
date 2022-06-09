@@ -206,7 +206,7 @@ end
 
 
 --==============================================================================
---      MATRIX
+--      MATRIZ
 --==============================================================================
 
 m = {
@@ -214,18 +214,18 @@ m = {
      {"d","e","f"},
      {"julio","king",9999}
     }
--- iterando as linhas da matrix
+-- iterando as linhas da MATRIZ
 for index,line in pairs(m)
 do
     print('Line: '..index)
     
-    --iterando todos itens da matrix
+    --iterando todos itens da MATRIZ
     for _,column in pairs(line)do 
         print(column)
     end
 end
---criando matrix
-matrix = 
+--criando MATRIZ
+MATRIZ = 
 {
     {1,2,3},
     {4,5,6},
@@ -233,10 +233,10 @@ matrix =
 }
 
 --==============================================================================
---iterando sobre matrix
+--iterando sobre MATRIZ
 --==============================================================================
 
-for  index,line in pairs(matrix)do
+for  index,line in pairs(MATRIZ)do
     print('linha: ',index)
     print('--------------')
     for _,value in pairs(line)do
@@ -244,18 +244,18 @@ for  index,line in pairs(matrix)do
     end
 end
 --==============================================================================
---matrix em matrix de matrix
+--MATRIZ em MATRIZ de MATRIZ
 --==============================================================================
 
 
-mmatrixx = {
+mMATRIZx = {
     "a",{"a1",
     {"a2",{"a3"
     ,{1,2,3,4,5,6,7}}}}}
-print(mmatrixx[2][2][2][2][7])
+print(mMATRIZx[2][2][2][2][7])
 
 --==============================================================================
--- dicionarios ou objetos lua matrixes
+-- dicionarios ou objetos lua MATRIZes
 --==============================================================================
 
 
