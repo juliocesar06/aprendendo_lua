@@ -271,7 +271,7 @@ for key,value in pairs(di)do
     print('key: ',key,"value: ",value)
     print(di[key])
 end
-]]
+
 --==============================================================================
 -- coraoutine
 --==============================================================================
@@ -298,3 +298,169 @@ coroutine.resume(routine_1)
 coroutine.resume(routine_2)
 coroutine.resume(routine_1)
 print(coroutine.status(routine_1))
+
+
+--==============================================================================
+-- os
+--==============================================================================
+            TIME
+
+-- imprimindo timestamp atual
+print(os.time())
+-- imprimindo timestamp colocado na variavel
+print(os.time(
+    {
+        year = 1999,
+        month = 12,
+        day =31,
+        hour =12,
+        min=59,
+        sec=59
+    }
+))
+-- imprimindo data e hora atual
+local data = os.date()
+print(data)
+
+--valor da variavei de ambiente do processo
+local home = os.getenv('HOME')
+print(home) 
+
+
+        FILE
+
+-- rename um texto
+os.rename("texto.txt","newtexto.txt")
+
+--remover
+os.remove('newtexto.txt')
+
+
+--              EXECULTANDO COMANDO DO WIN 
+os.execute('git status')
+
+
+--tempo de execuçao clock
+
+
+            --TIME/CLOCK()  --MUITO TOP
+-- executando o print por 10s
+
+
+-- inicia o contador
+local start = os.clock()
+i = 0
+print('teste de tempo de execuçao')
+print('digite um valor em segundo do tempo de loop')
+tempo = io.read('n') -- tempo number em segundos
+-- eanquanto o tempo
+while (os.clock()-start < tempo) do
+    print(i)
+    i = i + 1
+    print(os.clock() - start .. "s")
+    
+end
+
+print(os.clock() - start .. "s")
+
+        EXIT(para a execuçao)
+
+for i=0,10 do
+    print(i)
+    if i == 7 then
+        os.exit()
+    end
+end
+
+
+
+-- CUSTOM MODULES [criando modulos]
+-- criando modulo proprio mmath = {} ==> duas funçoes
+local mod = require('meuModulo.meu_math')
+f = mmath.sum(5,7)
+print(mmath.contador(mmath.sum,77,9999999))
+
+
+
+
+
+
+--==============================================================================
+-- OOP orientaçao a objetos LUA
+--==============================================================================
+  
+-- TABLE LUA == OBJ
+
+--obj
+-- declaraçao de objeto lua
+local Pessoa = 
+{
+    nome = "julio",
+    age = 30,
+    profissao = 'Desenvolvedor',
+    linguagem = {'Python',"Lua","Php","JavaScript",'C#'},
+}
+
+print("Nome: " .. Pessoa.nome .. " | Profissao: " .. Pessoa.profissao .." " .. Pessoa.linguagem[2])
+
+-- criando um objeto com atributos e metodos e self
+
+local function Caneta(marca,cor)
+    --contrutor atributos de instancia
+    marca = marca or "Desconhecido"
+    cor = cor or "Azul"
+    
+    return
+    {
+        -- metodo
+        marca = marca, --self.marca
+        cor = cor, -- self.cor
+
+        --acessar metodo (var:metodo)
+
+        --metodos 
+        --self.escrever
+        escrever = function (self)
+           print('Eu sou uma caneta: ' .. self.marca .. " da Cor: " .. self.cor) 
+        end,
+
+        --metodo rabiscar
+        rabiscar = function (self)
+            print("jjkdhjkhsajkfhjksfbnm,bmnxcbvmnbsfjkhsfdjkhsjkfxcb,mcnbxv,mnxcm,vnjkhsfjkhsmcxnvm,nx,cmnv")
+        end
+        
+
+    }
+end
+
+-- instanciando um objeto LUA
+
+local bic_preta = Caneta("Bic","Preta")
+bic_preta:escrever()
+bic_preta.rabiscar()
+
+]]
+
+--==============================================================================
+       -- classes
+--==============================================================================
+--classe
+function NewArea(width,height)
+    return 
+    {
+        -- atributos
+        width = width or  0,
+        height = height or 0,
+
+        --metodos
+        getArea = function (self)
+            return self.width * self.height
+        end,
+
+        getSpace =  function (self)
+            print(" altura: ",self.width," largura: ",self.height,"area: ", self:getArea())
+            
+        end,
+    }
+end
+
